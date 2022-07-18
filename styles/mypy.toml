@@ -22,8 +22,8 @@ files = [
     "tests/**/*.py"
 ]
 exclude = [
-    '^src\/**\/__init__\.py$',
-    '^alembic\/env\.py$'
+    "^src\\/**\\/__init__\\.py$",
+    "^alembic\\/env\\.py$"
 ]
 
 python_version = "3.10"  # specify major Python version.
