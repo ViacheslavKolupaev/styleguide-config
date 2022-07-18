@@ -19,14 +19,17 @@ charset = utf-8
 max_line_length = 120
 ij_visual_guides = 90,120
 ij_wrap_on_typing = true
+end_of_line = lf
+insert_final_newline = True
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = True
 
 [*.{py,md,yml,yaml,json}]
 trim_trailing_whitespace = true
 insert_final_newline = true
-indent_style = space
 
 [*.{py,json,md}]
-indent_size = 4
 tab_width = 4
 
 [{*.yaml,*.yml}]
@@ -36,3 +39,13 @@ tab_width = 2
 [{*.bash,*.sh}]
 indent_size = 2
 tab_width = 2
+
+[*.{js,json}]
+charset = utf-8
+indent_size = 2
+
+[*.{yml,yaml,md,rb}]
+indent_size = 2
+
+[Makefile]
+indent_style = tab
