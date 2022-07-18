@@ -12,18 +12,10 @@
 # permissions and limitations under the License.
 ##########################################################################################
 
-##########################################################################################
-# `nitpick` configuration file.
-#
-# Docs: https://nitpick.readthedocs.io/en/latest/configuration.html
-##########################################################################################
-
-[nitpick]
-minimum_version = "0.32.0"
-
-[nitpick.styles]
-include = [
-    "files.toml",
-    "isort.toml",
-    "poetry_dev_dependencies.toml",
-]
+["pyproject.toml".tool.poetry.dev-dependencies]
+pre-commit = "^2.20.0"
+isort = "^5.10.1"
+black = "^22.6.0"
+mypy = "0.931"
+wemake-python-styleguide = "^0.16.1"
+nitpick = "^0.32.0"
