@@ -26,5 +26,5 @@ include = [
     "files.toml",
     "isort.toml",
     "poetry_dev_dependencies.toml",
-#    "mypy.toml",
+    "mypy.toml",
 ]
