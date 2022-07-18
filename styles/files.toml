@@ -12,17 +12,17 @@
 # permissions and limitations under the License.
 ##########################################################################################
 
-##########################################################################################
-# `nitpick` configuration file.
-#
-# Docs: https://nitpick.readthedocs.io/en/latest/configuration.html
-##########################################################################################
+[nitpick.files.present]
+".gitignore" = "The project must contain the `.gitignore` file."
+".gitattributes" = "The project must contain the `.gitattributes` file."
+".editorconfig" = "The project must contain the `.editorconfig` file."
+"README.md" = "The project must contain the `README.md` file."
+"LICENSE" = "The project must contain the `LICENSE` file."
+"pyproject.toml" = "The project must contain the `pyproject.toml` file."
+"setup.cfg" = "The project must contain the `setup.cfg` file."
 
-[nitpick]
-minimum_version = "0.32.0"
-
-[nitpick.styles]
-include = [
-    "files.toml",
-    "isort.toml",
-]
+[nitpick.files.absent]
+".isort.cfg" = "Move values to `setup.cfg`, section [isort]."
+".flake8" = "Move values to `setup.cfg`, section [flake8]."
+"mypy.ini" = "Move values to `pyproject.toml`, section [tool.mypy]."
+"pytest.ini" = "Move values to `pyproject.toml`, section [tool.pytest.ini_options]."
