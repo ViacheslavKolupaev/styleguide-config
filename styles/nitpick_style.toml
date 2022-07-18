@@ -1,9 +1,47 @@
-# `wemake` style file for nitpick
-# https://raw.githubusercontent.com/andreoliwa/nitpick/v0.18.0/nitpick-style.toml
+##########################################################################################
+# Copyright (c) 2022. Viacheslav Kolupaev, https://vkolupaev.com/
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+# file except in compliance with the License. You may obtain a copy of the License at
+#
+#   https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software distributed under
+# the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied. See the License for the specific language governing
+# permissions and limitations under the License.
+##########################################################################################
+
+##########################################################################################
+# `nitpick` configuration file.
+#
+# Docs: https://nitpick.readthedocs.io/en/latest/configuration.html
+##########################################################################################
 
 [nitpick]
 minimum_version = "0.32.0"
 
 [nitpick.files.present]
-".editorconfig" = ""
-"CHANGELOG.md" = "A project should have a changelog"
+".gitignore" = "The project must contain the `.gitignore` file."
+".gitattributes" = "The project must contain the `.gitattributes` file."
+".editorconfig" = "The project must contain the `.editorconfig` file."
+"README.md" = "The project must contain the `README.md` file."
+"LICENSE" = "The project must contain the `LICENSE` file."
+"pyproject.toml" = "The project must contain the `pyproject.toml` file."
+"setup.cfg" = "The project must contain the `setup.cfg` file."
+
+[nitpick.files.absent]
+".isort.cfg" = "Move values to `setup.cfg`, section [isort]."
+".flake8" = "Move values to `setup.cfg`, section [flake8]."
+"mypy.ini" = "Move values to `pyproject.toml`, section [tool.mypy]."
+"pytest.ini" = "Move values to `pyproject.toml`, section [tool.pytest.ini_options]."
+
+["setup.cfg".isort]
+# These values should be placed inside `setup.cfg` in your repo:
+
+# Documentation: https://github.com/timothycrosley/isort/wiki/isort-Settings
+include_trailing_comma = true
+use_parentheses = true
+# See https://github.com/timothycrosley/isort#multi-line-output-modes
+multi_line_output = 3
+line_length = 120
