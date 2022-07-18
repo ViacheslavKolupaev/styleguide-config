@@ -14,17 +14,17 @@
 
 ["pyproject.toml".tool.mypy]
 # See: https://mypy.readthedocs.io/en/stable/config_file.html#using-a-pyproject-toml-file
-plugins = [
-    "pydantic.mypy",
-]
-files = [
-    "src/**/*.py",
-    "tests/**/*.py"
-]
-exclude = [
-    '^src\/**\/__init__\.py$',
-    '^alembic\/env\.py$'
-]
+#plugins = [
+#    "pydantic.mypy",
+#]
+#files = [
+#    "src/**/*.py",
+#    "tests/**/*.py"
+#]
+#exclude = [
+#    '^src\/**\/__init__\.py$',
+#    '^alembic\/env\.py$'
+#]
 
 python_version = "3.10"  # specify major Python version.
 follow_imports = "silent"
@@ -42,18 +42,18 @@ warn_return_any = true
 warn_redundant_casts = true
 warn_unused_ignores = true
 
-["pyproject.toml".tool.pydantic-mypy]
-# See: https://pydantic-docs.helpmanual.io/mypy_plugin/#plugin-settings
-init_forbid_extra = true
-init_typed = true
-warn_required_dynamic_aliases = true
-warn_untyped_fields = true
-
-[["pyproject.toml".tool.mypy.overrides]]
-module = [
-    "uvicorn",
-    "fastapi",
-    "typeguard",
-    "src.*.*",
-]
-ignore_missing_imports = true
+#["pyproject.toml".tool.pydantic-mypy]
+## See: https://pydantic-docs.helpmanual.io/mypy_plugin/#plugin-settings
+#init_forbid_extra = true
+#init_typed = true
+#warn_required_dynamic_aliases = true
+#warn_untyped_fields = true
+#
+#[["pyproject.toml".tool.mypy.overrides]]
+#module = [
+#    "uvicorn",
+#    "fastapi",
+#    "typeguard",
+#    "src.*.*",
+#]
+#ignore_missing_imports = true
