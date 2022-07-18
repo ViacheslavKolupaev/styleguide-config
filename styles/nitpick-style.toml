@@ -27,4 +27,5 @@ include = [
     "isort.toml",
     "poetry_dev_dependencies.toml",
     "mypy.toml",
+    "pytest.toml",
 ]
