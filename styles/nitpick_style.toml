@@ -1,0 +1,9 @@
+# `wemake` style file for nitpick
+# https://raw.githubusercontent.com/andreoliwa/nitpick/v0.18.0/nitpick-style.toml
+
+[nitpick]
+minimum_version = "0.32.0"
+
+[nitpick.files.present]
+".editorconfig" = ""
+"CHANGELOG.md" = "A project should have a changelog"
