@@ -14,23 +14,11 @@
 # permissions and limitations under the License.
 ##########################################################################################
 
-##########################################################################################
-# `nitpick` configuration file.
-#
-# Docs: https://nitpick.readthedocs.io/en/latest/configuration.html
-##########################################################################################
 
-[nitpick]
-minimum_version = "0.32.0"
+["setup.cfg".darglint]
+# Documentation: https://github.com/terrencepreilly/darglint
+strictness = "short"
+docstring_style = "google"
 
-[nitpick.styles]
-include = [
-    "files.toml",
-    "isort.toml",
-    "poetry_dev_dependencies.toml",
-    "mypy.toml",
-    "pytest.toml",
-    "flake8.toml",
-    "darglint.toml",
-    "pydocstyle.toml",
-]
+# Disable linting on all private methods.
+ignore_regex = "^_(.*)"

@@ -14,23 +14,6 @@
 # permissions and limitations under the License.
 ##########################################################################################
 
-##########################################################################################
-# `nitpick` configuration file.
-#
-# Docs: https://nitpick.readthedocs.io/en/latest/configuration.html
-##########################################################################################
 
-[nitpick]
-minimum_version = "0.32.0"
-
-[nitpick.styles]
-include = [
-    "files.toml",
-    "isort.toml",
-    "poetry_dev_dependencies.toml",
-    "mypy.toml",
-    "pytest.toml",
-    "flake8.toml",
-    "darglint.toml",
-    "pydocstyle.toml",
-]
+["setup.cfg".pydocstyle]
+convention = "google"
