@@ -35,29 +35,7 @@ nested-classes-whitelist = [
 ]
 
 # Ignore some violations: https://wemake-python-stylegui.de/en/0.16.1/pages/usage/violations/
-ignore = [
-    "E121",
-    "E123",
-    "E126",
-    "E133",
-    "E226",
-    "E241",
-    "E242",
-    "E704",
-    "W503",
-    "W504",
-    "W505",
-]
+ignore = "E121,E123,E126,E133,E226,E241,E242,E704,W503,W504,W505"
 
 # Excluding some directories:
-exclude = [
-    ".*",
-    "CVS",
-    "__pycache__",
-    "venv",
-    "venv_py??",
-    "venv_py???",
-    "docs",
-    "site",
-    "${env.WORKSPACE}",
-]
+exclude = ".*,CVS,__pycache__,venv,venv_py??,venv_py???,docs,site,${env.WORKSPACE}"
