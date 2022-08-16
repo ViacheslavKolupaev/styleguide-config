@@ -436,4 +436,4 @@ $RECYCLE.BIN/
 
 ### Project specific settings
 PRIVATE_NOTES.md
-backup/
+#backup/
