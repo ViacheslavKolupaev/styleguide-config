@@ -30,9 +30,7 @@ max-doc-length = 120
 
 # WPS configuration: https://wemake-python-stylegui.de/en/latest/pages/usage/configuration.html
 i-control-code = true
-nested-classes-whitelist = [
-    "Config",
-]
+nested-classes-whitelist = "Config"
 
 # Ignore some violations: https://wemake-python-stylegui.de/en/0.16.1/pages/usage/violations/
 ignore = "E121,E123,E126,E133,E226,E241,E242,E704,W503,W504,W505"
