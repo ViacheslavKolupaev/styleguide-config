@@ -37,3 +37,15 @@ ignore = "E121,E123,E126,E133,E226,E241,E242,E704,W503,W504,W505"
 
 # Excluding some directories:
 exclude = ".*,CVS,__pycache__,venv,venv_py??,venv_py???,docs,site,${env.WORKSPACE}"
+
+# Ignoring some errors in some files:
+per_file_ignores = """
+    # WPS420 Found wrong keyword: pass
+    # WPS604 Found incorrect node inside `class` body
+    # WPS114 Found underscored number name pattern: some_var_with_3_number
+    # WPS432 Found magic number: 45
+    # WPS215 Too many base classes: 7 > 3
+    # WPS600 Found subclassing a builtin: str
+    # D106 Missing docstring in public nested class: Config
+    src/*/schemas/*.py: WPS420, WPS604, WPS114, WPS432, WPS215, WPS600, D106
+    """
