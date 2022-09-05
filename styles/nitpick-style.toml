@@ -35,4 +35,5 @@ include = [
     "pydocstyle.toml",
     "python310.toml",
     "editorconfig.toml",
+    "gitattributes.toml",
 ]

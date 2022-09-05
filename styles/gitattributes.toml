@@ -1,0 +1,42 @@
+##########################################################################################
+#  Copyright 2022 Viacheslav Kolupaev; author's website address:
+#
+#   https://vkolupaev.com/?utm_source=c&utm_medium=link&utm_campaign=styleguide_config
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+# file except in compliance with the License. You may obtain a copy of the License at
+#
+#   https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software distributed under
+# the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied. See the License for the specific language governing
+# permissions and limitations under the License.
+##########################################################################################
+
+
+[nitpick.meta]
+name = "gitattributes"
+url = "https://www.git-scm.com/docs/gitattributes"
+
+[[".gitattributes".contains]]
+# Docs: https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings
+
+# Default fow Windows: `git config --global core.autocrlf true`
+# Default for Linux: `git config --global core.autocrlf input`
+
+# Set the default behavior, in case people don't have core.autocrlf set.
+line = "* text=auto"
+
+# Declare files that will always have LF line endings on checkout.
+line = "*.sh text eol=lf"
+line = "*.py text eol=lf"
+
+# Enable Git LFS.
+line = "*.csv filter=lfs diff=lfs merge=lfs -text"
+line = "*.zip filter=lfs diff=lfs merge=lfs -text"
+line = "*.gzip filter=lfs diff=lfs merge=lfs -text"
+line = "*.tar filter=lfs diff=lfs merge=lfs -text"
+line = "*.bin filter=lfs diff=lfs merge=lfs -text"
+line = "*.pkl filter=lfs diff=lfs merge=lfs -text"
+line = "*.ctb filter=lfs diff=lfs merge=lfs -text"
