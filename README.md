@@ -1,9 +1,15 @@
 styleguide-config
 =======
 
-![GitLab License](https://img.shields.io/gitlab/license/vkolupaev/styleguide-config?color=informational)
-![GitLab tag (latest by SemVer)](https://img.shields.io/gitlab/v/tag/vkolupaev/styleguide-config)
-![Python](https://img.shields.io/static/v1?label=Python&message=3.10&color=informational&logo=python&logoColor=white)
+![GitLab License](
+https://img.shields.io/gitlab/license/vkolupaev/styleguide-config?color=informational
+)
+![GitLab tag (latest by SemVer)](
+https://img.shields.io/gitlab/v/tag/vkolupaev/styleguide-config?label=styleguide-config
+)
+![Python](
+https://img.shields.io/static/v1?label=Python&message=3.10&color=informational&logo=python&logoColor=white
+)
 
 
 ## Documentation
@@ -14,12 +20,12 @@ styleguide-config
 ---
 
 Copyright 2022 [Viacheslav Kolupaev](
-https://vkolupaev.com/?utm_source=readme&utm_medium=link&utm_campaign=locust_standalone
+https://vkolupaev.com/?utm_source=readme&utm_medium=link&utm_campaign=styleguide-config
 ).
 
 [![website](
 https://img.shields.io/static/v1?label=website&message=vkolupaev.com&color=blueviolet&style=for-the-badge&
-)](https://vkolupaev.com/?utm_source=readme&utm_medium=badge&utm_campaign=locust_standalone)
+)](https://vkolupaev.com/?utm_source=readme&utm_medium=badge&utm_campaign=styleguide-config)
 
 [![LinkedIn](
 https://img.shields.io/static/v1?label=LinkedIn&message=vkolupaev&color=informational&style=flat&logo=linkedin
