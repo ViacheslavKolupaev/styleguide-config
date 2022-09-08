@@ -25,8 +25,26 @@
 [tool.poetry]
 name = "styleguide-config"
 version = "0.1.0"
-description = ""
+description = "A set of code style tool settings to enforce them in other projects."
+license = "Apache-2.0"
 authors = ["Viacheslav Kolupaev <v.s.kolupaev@gmail.com>"]
+maintainers = ["Viacheslav Kolupaev <v.s.kolupaev@gmail.com>"]
+readme = "README.md"
+homepage = "https://vkolupaev.com/?utm_source=code&utm_medium=link&utm_campaign=styleguide_config"
+repository = "https://gitlab.com/vkolupaev/styleguide-config"
+keywords = [
+    "devops",
+    "styleguide",
+    "codestyle",
+    "toolbox",
+    "python3",
+    "nitpick",
+    "flake8",
+    "isort",
+    "mypy",
+    "pytest",
+    "poetry",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
