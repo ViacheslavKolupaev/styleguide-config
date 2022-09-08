@@ -14,6 +14,12 @@ https://img.shields.io/static/v1?label=Python&message=3.10&color=informational&l
 ## What is this repository?
 A set of code style tool settings to enforce them in other projects.
 
+## ⭐ If I saved you time or helped you in some way
+All code in the repo is open source and completely free. I don't need anything from you.
+
+Just please put a star ⭐ if it was helpful to you. This motivates me to further develop this and other OpenSource
+projects.
+
 ## To whom and how can it be useful?
 First of all, I made this repository for myself. I'm tired of bringing tool settings into consistency code styles in
 different projects.
@@ -54,9 +60,9 @@ Follow these steps:
    # Documentation on caching settings: https://nitpick.readthedocs.io/en/latest/configuration.html#remote-style
    cache = "never"
    ```
-   3. Use the CLI `nitpick` to check and match against uniform settings.
-      1. Документация по CLI.
-      2. Example
+   3. Use the Command-line interface (CLI) `nitpick` to check and match against uniform settings.
+      1. [CLI Documentation](https://nitpick.readthedocs.io/en/latest/cli.html).
+      2. Example:
       ```bash
       nitpick check  # check everything
       nitpick fix  # fix everything
