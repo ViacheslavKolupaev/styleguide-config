@@ -24,7 +24,7 @@
 
 [tool.poetry]
 name = "styleguide-config"
-version = "0.1.0"
+version = "0.2.0"
 description = "A set of code style tool settings to enforce them in other projects."
 license = "Apache-2.0"
 authors = ["Viacheslav Kolupaev <v.s.kolupaev@gmail.com>"]
