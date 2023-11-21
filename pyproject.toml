@@ -47,8 +47,8 @@ keywords = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-nitpick = "^0.32.0"
+python = "^3.11"
+nitpick = "^0.34.0"
 [tool.poetry.dependencies.pylint]
 version = "*"
 optional = true

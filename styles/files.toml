@@ -22,6 +22,8 @@
 "LICENSE" = "The project must contain the `LICENSE` file."
 "pyproject.toml" = "The project must contain the `pyproject.toml` file."
 "setup.cfg" = "The project must contain the `setup.cfg` file."
+"Dockerfile" = "The project must contain the `Dockerfile` file."
+".dockerignore" = "The project must contain the `.dockerignore` file."
 
 [nitpick.files.absent]
 ".isort.cfg" = "Move values to `setup.cfg`, section [isort]."

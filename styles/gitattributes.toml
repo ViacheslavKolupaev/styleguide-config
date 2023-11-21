@@ -14,26 +14,29 @@
 # permissions and limitations under the License.
 ##########################################################################################
 
+##########################################################################################
+# `gitattributes` - Defining attributes per path.
+#
+# Docs: https://www.git-scm.com/docs/gitattributes
+#
+# Option `end_of_line`:
+#   - Docs: https://docs.github.com/en/github/getting-started-with-github/
+#           configuring-git-to-handle-line-endings
+#   - Default fow Windows: `git config --global core.autocrlf true`.
+#   - Default for Linux: `git config --global core.autocrlf input`.
+##########################################################################################
 
 [nitpick.meta]
 name = "gitattributes"
 url = "https://www.git-scm.com/docs/gitattributes"
 
-# Docs: https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings
-
-# Default fow Windows: `git config --global core.autocrlf true`
-# Default for Linux: `git config --global core.autocrlf input`
-
-# Set the default behavior, in case people don't have core.autocrlf set.
+# Set the default behavior, in case people don't have `core.autocrlf` set.
 [[".gitattributes".contains]]
 line = "* text=auto"
 
 # Declare files that will always have LF line endings on checkout.
 [[".gitattributes".contains]]
 line = "*.sh text eol=lf"
-
-[[".gitattributes".contains]]
-line = "*.py text eol=lf"
 
 # Enable Git LFS.
 [[".gitattributes".contains]]
@@ -50,3 +53,5 @@ line = "*.bin filter=lfs diff=lfs merge=lfs -text"
 line = "*.pkl filter=lfs diff=lfs merge=lfs -text"
 [[".gitattributes".contains]]
 line = "*.ctb filter=lfs diff=lfs merge=lfs -text"
+[[".gitattributes".contains]]
+line = "*.whl filter=lfs diff=lfs merge=lfs -text"

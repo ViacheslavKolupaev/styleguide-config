@@ -28,7 +28,7 @@ exclude = [
     "^alembic\\/env\\.py$"
 ]
 
-python_version = "3.10"  # specify major Python version.
+python_version = "3.11"  # specify major Python version.
 follow_imports = "silent"
 disable_error_code = "attr-defined"
 verbosity = 0
@@ -53,9 +53,10 @@ warn_untyped_fields = true
 
 [["pyproject.toml".tool.mypy.overrides]]
 module = [
+    "src.*.*",
     "uvicorn",
     "fastapi",
     "typeguard",
-    "src.*.*",
+    "sqlalchemy",
 ]
 ignore_missing_imports = true

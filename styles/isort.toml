@@ -14,12 +14,47 @@
 # permissions and limitations under the License.
 ##########################################################################################
 
-["setup.cfg".isort]
-# These values should be placed inside `setup.cfg` in your repo:
+##########################################################################################
+# `isort` configuration.
+#
+# Docs:
+#   1. https://pycqa.github.io/isort/docs/configuration/config_files.html
+#   2. https://pycqa.github.io/isort/docs/configuration/options.html
+#
+# GitHub: https://github.com/PyCQA/isort
+#
+# Issue `Enforce presence of keys (with any values)`:
+#   https://github.com/andreoliwa/nitpick/issues/218
+#   https://github.com/andreoliwa/nitpick/commit/506b407b5a8f6b7d5d89afe145721f7d555bb336
+#
+# TOML: https://github.com/toml-lang/toml
+#
+# The pyproject.toml file:
+#   https://github.com/python-poetry/poetry/blob/master/docs/pyproject.md
+#
+##########################################################################################
 
-# Documentation: https://github.com/timothycrosley/isort/wiki/isort-Settings
+[nitpick.meta]
+name = "isort"
+url = "https://github.com/PyCQA/isort"
+
+["pyproject.toml".tool.isort]
 include_trailing_comma = true
 use_parentheses = true
-# See https://github.com/timothycrosley/isort#multi-line-output-modes
+line_length = 88
 multi_line_output = 3
-line_length = 120
+ensure_newline_before_comments = true
+force_grid_wrap = 2
+lines_before_imports = 1
+lines_after_imports = 2
+order_by_type = true
+group_by_package = true
+known_first_party = [
+    "tests",
+    "rb_datalab_sm_boilerplate",
+]
+import_heading_future = "Future"
+import_heading_stdlib = "Standard Library"
+import_heading_firstparty = "First Party"
+import_heading_thirdparty = "Third Party"
+import_heading_localfolder = "Local Folder"

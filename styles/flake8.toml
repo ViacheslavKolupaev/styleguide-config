@@ -14,9 +14,8 @@
 # permissions and limitations under the License.
 ##########################################################################################
 
-
 ["setup.cfg".flake8]
-# Base flake8 configuration: https://flake8.pycqa.org/en/latest/user/configuration.html
+# Base `flake8` configuration: https://flake8.pycqa.org/en/latest/user/configuration.html
 format = "wemake"
 show_source = true
 statistics = false
@@ -24,28 +23,55 @@ doctests = true
 filename = "*.py"
 docstring-convention = "google"
 
-# flake8 options: https://flake8.pycqa.org/en/4.0.1/user/options.html
+# `flake8` options: https://flake8.pycqa.org/en/4.0.1/user/options.html
 max-line-length = 120
 max-doc-length = 120
 
-# WPS configuration: https://wemake-python-stylegui.de/en/latest/pages/usage/configuration.html
+# `WPS` configuration:
+#   https://wemake-python-stylegui.de/en/latest/pages/usage/configuration.html
 i-control-code = true
 nested-classes-whitelist = "Config"
 
-# Ignore some violations: https://wemake-python-stylegui.de/en/0.16.1/pages/usage/violations/
-ignore = "E121,E123,E126,E133,E226,E241,E242,E704,W503,W504,W505"
+# Ignore some violations:
+#   https://wemake-python-styleguide.rtfd.io/en/0.17.0/pages/usage/violations/
+ignore = "D104,E121,E123,E126,E133,E226,E241,E242,E704,W503,W504,W505,WPS300"
 
 # Excluding some directories:
-exclude = ".*,CVS,__pycache__,venv,venv_py??,venv_py???,docs,site,${env.WORKSPACE}"
+exclude = """.*,CVS,__pycache__,venv,venv_py??,venv_py???,docs,site,${env.WORKSPACE},\
+build"""
 
-# Ignoring some errors in some files:
-# WPS226 Found string literal over-use
-# WPS420 Found wrong keyword: pass
-# WPS604 Found incorrect node inside `class` body
+
+##########################################################################################
+# Ignoring some errors in some files.
+#   https://wemake-python-styleguide.rtfd.io/en/0.17.0/pages/usage/violations/
+#
+# D104  Missing docstring in public package
+# D106 Missing docstring in public nested class: Config
+# DAR101 Missing parameter(s) in Docstring: - body
+# DAR201 Missing "Returns" in Docstring: - return
+# DAR401 Missing exception(s) in Raises section: -r ValueError
+# S101 Enable `assert` keyword for tests
 # WPS114 Found underscored number name pattern: some_var_with_3_number
-# WPS432 Found magic number: 45
+# WPS115 Found upper-case constant in a class DB_HOST
+# WPS202 Found too many module members: 8 > 7
 # WPS215 Too many base classes: 7 > 3
+# WPS221 Found line with high Jones Complexity: 18 > 14
+# WPS226 Found string literal over-use: description > 3
+# WPS237 Found a too complex `f` string
+# WPS300 Found local folder import
+# WPS305 Found `f` string
+# WPS306 Found class without a base class: Config
+# WPS404 Found complex default value - Body, Header, Query
+# WPS420 Found wrong keyword: pass
+# WPS432 Found magic number: 45
 # WPS600 Found subclassing a builtin: str
 # D106 Missing docstring in public nested class: Config
+# WPS604 Found incorrect node inside `class` body
+##########################################################################################
+# TODO: Think of a way to break one long line into several lines.
 per_file_ignores = """src/*/locustfile.py: WPS226, \
-src/*/schemas/*.py: WPS420, WPS604, WPS114, WPS432, WPS215, WPS600, D106"""
+src/*/schemas/*.py: WPS420, WPS604, WPS114, WPS432, WPS215, WPS600, D106,\
+./src/*/app.py:WPS305,WPS237,WPS221, \
+./src/*/fastapi_app_description.py:WPS237,WPS305, \
+./src/*/config.py:WPS115,WPS432,WPS202,WPS226, \
+./tests/*.py:S101,WPS226,WPS432"""
