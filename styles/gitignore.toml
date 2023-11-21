@@ -1,0 +1,212 @@
+# ########################################################################################
+#  Copyright (c) 2023 Viacheslav Kolupaev; author's website address:
+#
+#      https://vkolupaev.com/?utm_source=git&utm_medium=link&utm_campaign=copyright
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# ########################################################################################
+
+[nitpick.meta]
+name = "gitignore"
+url = "https://www.git-scm.com/docs/gitignore"
+
+# Ignore all hidden directories.
+[[".gitignore".contains]]
+line = ".*/"
+
+# Thumbnails
+[[".gitignore".contains]]
+line = "._*"
+
+# GPG template.
+[[".gitignore".contains]]
+line = "secring.*"
+
+# CMake
+[[".gitignore".contains]]
+line = "cmake-build-*/"
+
+# Python byte-compiled / optimized / DLL files/
+[[".gitignore".contains]]
+line = "__pycache__/"
+
+[[".gitignore".contains]]
+line = "*.py[cod]"
+
+[[".gitignore".contains]]
+line = "*$py.class"
+
+# C extensions
+[[".gitignore".contains]]
+line = "*.so"
+
+[[".gitignore".contains]]
+line = "*.log"
+
+# Distribution / packaging
+[[".gitignore".contains]]
+line = ".Python"
+
+[[".gitignore".contains]]
+line = "build/"
+
+[[".gitignore".contains]]
+line = "develop-eggs/"
+
+[[".gitignore".contains]]
+line = "dist/"
+
+[[".gitignore".contains]]
+line = "downloads/"
+
+[[".gitignore".contains]]
+line = "eggs/"
+
+[[".gitignore".contains]]
+line = "lib/"
+
+[[".gitignore".contains]]
+line = "lib64/"
+
+[[".gitignore".contains]]
+line = "parts/"
+
+[[".gitignore".contains]]
+line = "sdist/"
+
+[[".gitignore".contains]]
+line = "var/"
+
+[[".gitignore".contains]]
+line = "wheels/"
+
+[[".gitignore".contains]]
+line = "pip-wheel-metadata/"
+
+[[".gitignore".contains]]
+line = "share/python-wheels/"
+
+[[".gitignore".contains]]
+line = "*.egg-info/"
+
+[[".gitignore".contains]]
+line = ".installed.cfg"
+
+[[".gitignore".contains]]
+line = "*.egg"
+
+[[".gitignore".contains]]
+line = "MANIFEST"
+
+# Unit test / coverage reports
+[[".gitignore".contains]]
+line = "htmlcov/"
+
+[[".gitignore".contains]]
+line = ".coverage"
+
+[[".gitignore".contains]]
+line = ".coverage.*"
+
+[[".gitignore".contains]]
+line = ".cache"
+
+[[".gitignore".contains]]
+line = "nosetests.xml"
+
+[[".gitignore".contains]]
+line = "coverage.xml"
+
+[[".gitignore".contains]]
+line = "*.cover"
+
+[[".gitignore".contains]]
+line = "*.py,cover"
+
+[[".gitignore".contains]]
+line = "cover/"
+
+[[".gitignore".contains]]
+line = "xmlReport/"
+
+[[".gitignore".contains]]
+line = "junit_report.xml"
+
+# Environments
+[[".gitignore".contains]]
+line = ".env"
+
+[[".gitignore".contains]]
+line = ".env.*"
+
+[[".gitignore".contains]]
+line = ".venv"
+
+[[".gitignore".contains]]
+line = "env/"
+
+[[".gitignore".contains]]
+line = "venv/"
+
+[[".gitignore".contains]]
+line = "venv_py3?/"
+
+[[".gitignore".contains]]
+line = "venv_py3??/"
+
+[[".gitignore".contains]]
+line = "ENV/"
+
+[[".gitignore".contains]]
+line = "env.bak/"
+
+[[".gitignore".contains]]
+line = "venv.bak/"
+
+# `mkdocs` documentation
+[[".gitignore".contains]]
+line = "/site"
+
+# `mypy`
+[[".gitignore".contains]]
+line = ".dmypy.json"
+
+[[".gitignore".contains]]
+line = "dmypy.json"
+
+# Windows thumbnail cache files
+[[".gitignore".contains]]
+line = "Thumbs.db"
+
+[[".gitignore".contains]]
+line = "Thumbs.db:encryptable"
+
+[[".gitignore".contains]]
+line = "ehthumbs.db"
+
+[[".gitignore".contains]]
+line = "ehthumbs_vista.db"
+
+# SonarQube
+[[".gitignore".contains]]
+line = ".sonar"
+
+[[".gitignore".contains]]
+line = ".scannerwork/"
+
+# Project specific settings
+[[".gitignore".contains]]
+line = "PRIVATE_NOTES.md"
+
+[[".gitignore".contains]]
+line = "backup/"
