@@ -1,0 +1,65 @@
+# ########################################################################################
+#  Copyright (c) 2023 Viacheslav Kolupaev; author's website address:
+#
+#      https://vkolupaev.com/?utm_source=c&utm_medium=link&utm_campaign=styleguide_config
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# ########################################################################################
+
+##########################################################################################
+# Unified Python project settings file.
+#
+# First introduced in PEP 518 and later expanded in PEP 517, PEP 621 and PEP 660.
+# This file contains build system requirements and information, which are used by pip
+# to build the package.
+#
+# `poetry`:
+#   Docs: https://python-poetry.org/docs/
+#   GitHub: https://github.com/python-poetry/poetry
+#
+# TOML: https://github.com/toml-lang/toml
+#
+# The pyproject.toml file:
+#   https://github.com/python-poetry/poetry/blob/master/docs/pyproject.md
+#
+# Package search: https://pypi.org/
+# ----------------------------------------------------------------------------------------
+# About Non-optional vs Optional groups.
+#
+# By default, dependencies across all non-optional groups will be installed when
+# executing `poetry install`.
+#
+# Use, for example:
+#   `poetry install --no-root --with app,lint_test,type_test,unit_test,dev --sync`
+#   `poetry install --no-root --only app,lint_test,type_test,unit_test,dev --sync`
+#   `poetry install --only build --sync`
+#   `poetry update --only app,lint_test,type_test,unit_test,dev`
+#
+# Optional group dependencies will still be resolved alongside other dependencies, so
+# special care should be taken to ensure they are compatible with each other.
+#
+##########################################################################################
+
+[nitpick.meta]
+# See: https://github.com/python-poetry/poetry/blob/master/docs/pyproject.md
+name = "Poetry"
+url = "https://github.com/python-poetry/poetry"
+
+
+["pyproject.toml".build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+["pyproject.toml".tool.poetry]
+readme = "README.md"
