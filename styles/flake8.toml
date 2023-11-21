@@ -75,3 +75,5 @@ src/*/schemas/*.py: WPS420, WPS604, WPS114, WPS432, WPS215, WPS600, D106,\
 ./src/*/fastapi_app_description.py:WPS237,WPS305, \
 ./src/*/config.py:WPS115,WPS432,WPS202,WPS226, \
 ./tests/*.py:S101,WPS226,WPS432"""
+
+classmethod-decorators = "classmethod,validator"
