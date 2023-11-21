@@ -1,0 +1,64 @@
+# ########################################################################################
+#  Copyright (c) 2023 Viacheslav Kolupaev; author's website address:
+#
+#      https://vkolupaev.com/?utm_source=c&utm_medium=link&utm_campaign=styleguide_config
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# ########################################################################################
+
+##########################################################################################
+# `commitizen` configuration.
+#
+# Docs: https://commitizen-tools.github.io/commitizen/config/
+# GitHub: https://github.com/commitizen-tools/commitizen
+#
+# Issue `Enforce presence of keys (with any values)`:
+#   https://github.com/andreoliwa/nitpick/issues/218
+#   https://github.com/andreoliwa/nitpick/commit/506b407b5a8f6b7d5d89afe145721f7d555bb336
+#
+# TOML: https://github.com/toml-lang/toml
+#
+# The pyproject.toml file:
+#   https://github.com/python-poetry/poetry/blob/master/docs/pyproject.md
+#
+##########################################################################################
+
+[nitpick.meta]
+name = "Commitizen (Python)"
+url = "https://github.com/commitizen-tools/commitizen"
+
+
+["pyproject.toml".tool.commitizen]
+name = "cz_conventional_commits"
+#version = "0.1.0"
+version_files = [
+    "pyproject.toml:^version"
+]
+version_provider = "poetry"
+tag_format = "v$version"
+update_changelog_on_bump = true
+gpg_sign = false
+annotated_tag = true
+style = [
+    ["qmark", "fg:#ff9d00 bold"],
+    ["question", "bold"],
+    ["answer", "fg:#ff9d00 bold"],
+    ["pointer", "fg:#ff9d00 bold"],
+    ["highlighted", "fg:#ff9d00 bold"],
+    ["selected", "fg:#cc5454"],
+    ["separator", "fg:#cc5454"],
+    ["instruction", ""],
+    ["text", ""],
+    ["disabled", "fg:#858585 italic"]
+]
+major_version_zero = true
