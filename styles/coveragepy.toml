@@ -1,0 +1,71 @@
+# ########################################################################################
+#  Copyright (c) 2023 Viacheslav Kolupaev; author's website address:
+#
+#      https://vkolupaev.com/?utm_source=c&utm_medium=link&utm_campaign=styleguide_config
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# ########################################################################################
+
+##########################################################################################
+# `coveragepy` configuration.
+#
+# Docs: https://coverage.readthedocs.io/en/7.2.1/config.html
+#
+# GitHub: https://github.com/nedbat/coveragepy
+#
+# TOML: https://github.com/toml-lang/toml
+#
+# The pyproject.toml file:
+#   https://github.com/python-poetry/poetry/blob/master/docs/pyproject.md
+#
+##########################################################################################
+
+[nitpick.meta]
+name = "coveragepy"
+url = "https://github.com/nedbat/coveragepy"
+
+
+["pyproject.toml".tool.coverage.run]
+branch = true
+
+# Docs: https://coverage.readthedocs.io/en/7.2.1/source.html#source
+omit = [
+    "*/tests/*",
+]
+
+
+["pyproject.toml".tool.coverage.report]
+# Regexes for lines to exclude from consideration
+# Docs: https://coverage.readthedocs.io/en/7.2.1/excluding.html#excluding
+exclude_lines = [
+    "pragma: no cover",
+
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self.debug",
+    "if config.IS_DEBUG",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+
+     # Don't complain if non-runnable code isn't run:
+    "if __name__ == .__main__.:",
+]
+show_missing = true
+
+
+["pyproject.toml".tool.coverage.xml]
+# Where to write the XML report.
+# Docs: https://coverage.readthedocs.io/en/7.2.1/config.html#xml-output
+output = "coverage.xml"
