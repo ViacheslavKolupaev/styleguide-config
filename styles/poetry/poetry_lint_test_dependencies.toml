@@ -39,3 +39,4 @@ optional = true
 wemake-python-styleguide = {version = "^0"}
 ruff = {version = "^0"}
 pre-commit = {version = "^3"}
+yamllint = {version = "^1"}
