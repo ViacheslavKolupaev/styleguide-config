@@ -1,0 +1,43 @@
+# ########################################################################################
+#  Copyright (c) 2023 Viacheslav Kolupaev; author's website address:
+#
+#      https://vkolupaev.com/?utm_source=c&utm_medium=link&utm_campaign=styleguide_config
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      https://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# ########################################################################################
+
+##########################################################################################
+# Optional group.
+#
+# By default, dependencies across all non-optional groups will be installed when
+# executing `poetry install`.
+#
+# Optional groups can be installed in addition to the `default` dependencies.
+# Use, for example: `poetry install --with dev --sync`.
+#
+# Optional group dependencies will still be resolved alongside other dependencies, so
+# special care should be taken to ensure they are compatible with each other.
+#
+# Package search: https://pypi.org/
+##########################################################################################
+
+["pyproject.toml".tool.poetry.group.load_test]
+optional = true
+
+
+["pyproject.toml".tool.poetry.group.load_test.dependencies]
+locust = {version = "^2"}
+locust-plugins = {version = "^4"}
+pydantic = {version = "^2"}
+typeguard = {version = "^4"}
+orjson = {version = "^3"}

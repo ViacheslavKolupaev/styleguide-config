@@ -50,4 +50,5 @@ include = [
     "poetry/poetry_lint_test_dependencies.toml",
     "poetry/poetry_type_test_dependencies.toml",
     "poetry/poetry_unit_test_dependencies.toml",
+    "poetry/poetry_load_test_dependencies.toml",
 ]
