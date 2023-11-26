@@ -51,7 +51,6 @@ order_by_type = true
 group_by_package = true
 known_first_party = [
     "tests",
-    "rb_datalab_sm_boilerplate",
 ]
 import_heading_future = "Future"
 import_heading_stdlib = "Standard Library"
